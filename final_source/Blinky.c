@@ -13,6 +13,8 @@ int main()
 	GLCD_DrawX(1, 1);
 	GLCD_DrawX(2, 2);
 	GLCD_DrawX(3, 3);
+	GLCD_DrawO(1, 3);
+	GLCD_DrawO(3, 1);
 	
 	GLCD_DrawSelection(2, 2);
 	GLCD_ClearSelection(2, 2);

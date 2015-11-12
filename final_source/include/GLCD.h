@@ -41,9 +41,9 @@
 
 extern void GLCD_Init           (void);
 extern void GLCD_WindowMax      (void);
-extern void GLCD_SetPixel				(unsigned int x, unsigned int y, unsigned short color);
+extern void GLCD_SetPixel		(unsigned int x, unsigned int y, unsigned short color);
 extern void GLCD_PutPixel       (unsigned int x, unsigned int y);
-extern void GLCD_ClearPixel			(unsigned int x, unsigned int y);
+extern void GLCD_ClearPixel		(unsigned int x, unsigned int y);
 extern void GLCD_SetTextColor   (unsigned short color);
 extern void GLCD_SetBackColor   (unsigned short color);
 extern void GLCD_Clear          (unsigned short color);

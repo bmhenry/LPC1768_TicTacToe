@@ -18,13 +18,22 @@
 #define ROW3 H_OFFSET + SPACER * 5 + LETTERDIM * 2 + 2
 #define COL3 W_OFFSET + SPACER * 5 + LETTERDIM * 2 + 2
 
+// globals:
+static unsigned int rows[] = {0, ROW1, ROW2, ROW3};
+static unsigned int cols[] = {0, COL1, COL2, COL3};
+
+// point struct
+typedef struct Point {
+	unsigned int x;
+	unsigned int y;
+} Point;
 
 // starts at 0, 0
 extern void GLCD_DrawBoard(void);
 
 // 3 rows, 3 columns
 extern void GLCD_DrawX(int row, int col);
-// extern void GLCD_DrawO(int row, int col);
+extern void GLCD_DrawO(int row, int col);
 extern void GLCD_DrawSelection(int row, int col);
 extern void GLCD_ClearSelection(int row, int col);
 
