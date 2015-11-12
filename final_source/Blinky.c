@@ -4,6 +4,9 @@
 #include "stdio.h"
 #include "ttt.h"
 
+// center the board
+#define BOARD_CENTERED 1
+
 int main()
 {
 	GLCD_Init();
