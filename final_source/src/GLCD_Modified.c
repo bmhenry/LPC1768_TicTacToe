@@ -946,3 +946,35 @@ void GLCD_WrReg (unsigned char reg, unsigned short val) {
   wr_reg (reg, val);
 }
 /******************************************************************************/
+
+void alt_drawboard(void)
+{
+  int i,j;
+  int txtcolor = GLCD_GetTxtColor();
+  int bgcolor = GLCD_GetBgColor();
+
+  int x = W_OFFSET;
+  int y = H_OFFSET;
+  int w = BOARD_WIDTH;
+  int h = BOARD_HEIGHT;
+
+  GLCD_SetWindow(x, y, w, h);
+  wr_cmd(0x22);
+
+  wr_dat_start();
+
+  for (i = 0; i < h; i++) {
+    for (j = 0; j <= w-1; j++) {
+      if(i == (SPACER * 2 + LETTERDIM + 1 + W_OFFSET) || i == ((SPACER * 2 + LETTERDIM) * 2 + 1 * W_OFFSET) ) {
+        wr_dat_only(txtcolor);
+      } else if (j == (SPACER * 2 + LETTERDIM + 1 + H_OFFSET) || j == ((SPACER * 2 + LETTERDIM) * 2 + 1 + H_OFFSET) ) {
+        wr_dat_only(txtcolor);
+      } else {
+        wr_dat_only(bgcolor);
+      }
+    }
+  }
+
+  wr_dat_stop();
+
+}

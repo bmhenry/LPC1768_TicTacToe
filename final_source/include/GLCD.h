@@ -11,6 +11,8 @@
 #ifndef _GLCD_H
 #define _GLCD_H
 
+#include "ttt.h"
+
 /*------------------------------------------------------------------------------
   Color coding
   GLCD is coded:   15..11 red, 10..5 green, 4..0 blue  (unsigned short)  GLCD_R5, GLCD_G6, GLCD_B5   
@@ -39,6 +41,8 @@
 #define Yellow          0xFFE0      /* 255, 255, 0   */
 #define White           0xFFFF      /* 255, 255, 255 */
 
+
+
 extern void GLCD_Init           (void);
 extern void GLCD_WindowMax      (void);
 extern void GLCD_SetPixel		(unsigned int x, unsigned int y, unsigned short color);
@@ -59,6 +63,11 @@ extern unsigned int GLCD_GetBgColor		(void);
 extern unsigned int GLCD_GetTxtColor	(void);
 
 extern void GLCD_WrCmd          (unsigned char cmd);
-extern void GLCD_WrReg          (unsigned char reg, unsigned short val); 
+extern void GLCD_WrReg          (unsigned char reg, unsigned short val);
+
+
+//
+extern void alt_drawboard(void);
+
 
 #endif /* _GLCD_H */

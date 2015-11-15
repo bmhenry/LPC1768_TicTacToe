@@ -5,14 +5,14 @@
 #include "ttt.h"
 
 // center the board
-#define BOARD_CENTERED 1
+//#define BOARD_CENTERED 1
 
 int main()
-{
+{	
 	GLCD_Init();
 	GLCD_Clear(White);
 	
-	GLCD_DrawBoard();
+	alt_drawboard();
 	GLCD_DrawX(1, 1);
 	GLCD_DrawX(2, 2);
 	GLCD_DrawX(3, 3);

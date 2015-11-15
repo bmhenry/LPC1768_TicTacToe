@@ -8,5 +8,6 @@
 .\flash\blinky.o: .\include\core_cmFunc.h
 .\flash\blinky.o: .\include\system_LPC17xx.h
 .\flash\blinky.o: .\include\GLCD.h
-.\flash\blinky.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\flash\blinky.o: .\include\ttt.h
+.\flash\blinky.o: .\include\GLCD.h
+.\flash\blinky.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

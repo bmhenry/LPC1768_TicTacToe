@@ -6,5 +6,7 @@
 .\flash\glcd_modified.o: .\include\core_cmFunc.h
 .\flash\glcd_modified.o: .\include\system_LPC17xx.h
 .\flash\glcd_modified.o: .\include\GLCD.h
+.\flash\glcd_modified.o: .\include\ttt.h
+.\flash\glcd_modified.o: .\include\GLCD.h
 .\flash\glcd_modified.o: .\include\Font_6x8_h.h
 .\flash\glcd_modified.o: .\include\Font_16x24_h.h

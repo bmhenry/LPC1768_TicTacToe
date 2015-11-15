@@ -1,6 +1,7 @@
 #include "ttt.h"
 
 
+
 void GLCD_DrawBoard(void)
 {
 	int w, h;
@@ -10,10 +11,8 @@ void GLCD_DrawBoard(void)
 		{
 			if (w == (SPACER * 2 + LETTERDIM + 1 + W_OFFSET) || w == ((SPACER * 2 + LETTERDIM) * 2 + 1 + W_OFFSET) )
 				GLCD_PutPixel(w, h);
-
-			if (h == (SPACER * 2 + LETTERDIM + 1 + H_OFFSET) || h == ((SPACER * 2 + LETTERDIM) * 2 + 1 + H_OFFSET) )
+			else if (h == (SPACER * 2 + LETTERDIM + 1 + H_OFFSET) || h == ((SPACER * 2 + LETTERDIM) * 2 + 1 + H_OFFSET) )
 				GLCD_PutPixel(w, h);
-
 			else
 				GLCD_ClearPixel(w, h);
 		}
